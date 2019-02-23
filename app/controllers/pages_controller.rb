@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
 
-def home
+  def home
+    # se já tiver logado redireciona pra pagina dos artigos
+    redirect_to articles_path if logged_in?
+  end
 
-end
+  def about
 
-def about
-
-end
+  end
 
 end
